@@ -27,6 +27,15 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+
 HERE = Path(__file__).resolve().parent
 FRONTEND_DIR = HERE.parent / "frontend"
 DATA_FILE = HERE / "roster.json"
