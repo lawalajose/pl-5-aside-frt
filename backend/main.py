@@ -13,11 +13,11 @@ is the roster itself.
 
 from __future__ import annotations
 
-# import uvicorn
-# import json
-# import os
-# import random
-# import re
+import uvicorn
+import json
+import os
+import random
+import re
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
