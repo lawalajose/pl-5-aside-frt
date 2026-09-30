@@ -212,11 +212,11 @@ def assign(payload: AssignIn) -> Dict[str, Any]:
         }
 
 
-@app.post("/api/reset")
-def reset() -> Dict[str, Any]:
-    with _LOCK:
-        _save({"roster": {}, "updated_at": _now()})
-    return {"ok": True, "roster": {}}
+# @app.post("/api/reset")
+# def reset() -> Dict[str, Any]:
+#     with _LOCK:
+#         _save({"roster": {}, "updated_at": _now()})
+#     return {"ok": True, "roster": {}}
 
 
 # Static site last: API routes above win over this catch-all mount.
